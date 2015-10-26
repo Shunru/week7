@@ -10,8 +10,8 @@ function Bubble(){
 
     //method:draw the bubble
     this.drawBubble = function(){
-        stroke('green');
-        fill('peru');
+        stroke('blue');
+        fill('red');
     ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
     }
 
