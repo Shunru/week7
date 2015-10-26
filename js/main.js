@@ -1,5 +1,6 @@
-//Bubble Constructor
-
+//globel variables
+ var myArray = [];//create blank array
+//bubble structor
 function Bubble(){
 
 //create x and y properties(variables)
@@ -24,7 +25,7 @@ function setup(){
    var cnv = createCanvas(windowWidth,windowHeight);
     cnv.parent('windows');
 
-    var myArray = [];//create blank array
+
     //add stuff to the array with a loop
     for(var i=0; i<10; i++){
         //myArray[i] = "item" + i;
@@ -57,5 +58,17 @@ function mousePressed(){
 
 
 
+//loop through myArray and check if mouse is in each Bubble
+    var d;
+    console.log(myArray);
+    for(var i=0; i < myArray.length;i++);{
+
+       // myArray[i].x myArray[i].r
+
+        d = dist(mouseX, mouseY,myArray[].x,myArray[].y);
+        console.log("distance",d);
+
+
+    }
 
 }
