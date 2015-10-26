@@ -49,3 +49,13 @@ function setup(){
 
 
 }//end setup
+
+//listen for mouse presses with the built-in p5 mousePressed method
+function mousePressed(){
+//check that this is woking
+    console.log("mouse Pressed");
+
+
+
+
+}
