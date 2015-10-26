@@ -27,7 +27,7 @@ function setup(){
 
 
     //add stuff to the array with a loop
-    for(var i=0; i<10; i++){
+    for(var i=0; i<100; i++){
         //myArray[i] = "item" + i;
         myArray[i] = new Bubble();
         myArray[i].drawBubble();
@@ -55,17 +55,15 @@ function setup(){
 function mousePressed(){
 //check that this is woking
     console.log("mouse Pressed");
-
-
-
 //loop through myArray and check if mouse is in each Bubble
+
+    //console.log(myArray);
     var d;
-    console.log(myArray);
-    for(var i=0; i < myArray.length;i++);{
+    for(var i=0; i < myArray.length;i++){
 
        // myArray[i].x myArray[i].r
 
-        d = dist(mouseX, mouseY,myArray[].x,myArray[].y);
+        d = dist(mouseX, mouseY,myArray[i].x,myArray[i].y);
         console.log("distance",d);
 
 
