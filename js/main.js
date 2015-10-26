@@ -8,15 +8,21 @@ function Bubble(){
     this.y = random(height);
     this.r = 20; //r is for radius whic is 1/2 the width of the circle
     this.bubbleSize = this.r*2; //width and heigh are twice the radius
-    r = random
+    r = random(255);
+    g = random(255);
+    b = random(255);
+
     //method:draw the bubble
     this.drawBubble = function(){
-        stroke('blue');
-        fill('red');
+
+       fill(r,g,b);
     ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
     }
     this.changeColor = function(){
-        fill("orange")
+        console.log("changeColor");
+        r = random(255);
+        g = random(255);
+        b = random(255);
         this.drawBubble();
 
     }
@@ -36,20 +42,6 @@ function setup(){
         myArray[i] = new Bubble();
         myArray[i].drawBubble();
     }
-    //log out the array
-    console.log(myArray);
-    //loop to go through every item in the array
-    for(var i=0; i< myArray.length; i++){
-      //  myArray[i]+=10;
-        console.log(myArray[i]);
-    }
-    console.log(myArray);
-   // console.log(myArray[0]);
-    //console.log(myArray[1]);
-    //console.log(myArray[2]);
-    //console.log(myArray);
-
-   // console.log("myArray",myArray);
 
 
 
@@ -68,13 +60,13 @@ function mousePressed(){
        // myArray[i].x myArray[i].r
 
         d = dist(mouseX, mouseY,myArray[i].x,myArray[i].y);
-        console.log("distance",d);
+       // console.log("distance",d);
 
         //check to see if the distance is less than the radius
         //ie is the mouse in th bubble
         if(d< myArray[i].r){
-
-        console.log("mouse in bubble");
+   myArray[i].changeColor();
+        //console.log("mouse in bubble");
 
         }
     }
